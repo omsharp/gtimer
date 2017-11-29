@@ -9,7 +9,6 @@
    Height="39"
    mc:Ignorable="d">
    <Grid>
-      <!--! Outer Stack-->
       <Grid>
          <Grid.RowDefinitions>
             <RowDefinition Height="15" />

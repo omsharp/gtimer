@@ -29,7 +29,7 @@
             <Parent guid= "guidGTimerPackageCmdSet" id="GTimerToolbarGroup" />
             <Icon guid="guidImages" id="bmpPic1" />
             <Strings>
-               <ButtonText>Invoke ToolbarTestCommand</ButtonText>
+               <ButtonText>G-Timer</ButtonText>
             </Strings>
          </Button>
          
