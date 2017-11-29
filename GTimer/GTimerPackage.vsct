@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+   <Extern href="stdidcmd.h"/>
+   <Extern href="vsshlids.h"/>
+
+   <Commands package="guidGTimerPackage">
+
+      <Menus>
+         <Menu guid="guidGTimerPackageCmdSet" id="GTimerToolbar" type="Toolbar" >
+            <CommandFlag>DefaultDocked</CommandFlag>
+            <Strings>
+               <ButtonText>G-Timer</ButtonText>
+               <CommandName>G-Timer</CommandName>
+            </Strings>
+         </Menu>
+      </Menus>
+
+      <Groups>
+
+         <Group guid="guidGTimerPackageCmdSet" id="GTimerToolbarGroup" priority="0x0000">
+            <Parent guid="guidGTimerPackageCmdSet" id="GTimerToolbar"/>
+         </Group>
+      </Groups>
+
+      <Buttons>
+
+         <Button guid="guidGTimerPackageCmdSet" id="GTimerCommandId" priority="0x0100" type="Button">
+            <Parent guid= "guidGTimerPackageCmdSet" id="GTimerToolbarGroup" />
+            <Icon guid="guidImages" id="bmpPic1" />
+            <Strings>
+               <ButtonText>Invoke ToolbarTestCommand</ButtonText>
+            </Strings>
+         </Button>
+         
+         <Button guid="guidGTimerPackageCmdSet" id="GTimerCommandId" priority="0x0100" type="Button">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
+            <Icon guid="guidImages" id="bmpPic1" />
+            <Strings>
+               <ButtonText>G-Timer</ButtonText>
+            </Strings>
+         </Button>
+      </Buttons>
+
+      <Bitmaps>
+         <Bitmap guid="guidImages" href="Resources\GTimerCommand.png" usedList="bmpPic1"/>
+      </Bitmaps>
+   </Commands>
+
+   <Symbols>
+      <GuidSymbol name="guidGTimerPackage" value="{871639cc-6d70-4d62-9581-3e01f1e7ebbe}" />
+
+      <GuidSymbol name="guidGTimerPackageCmdSet" value="{f2c43744-3e34-4c39-a132-bcd48fdb9349}">
+         <IDSymbol name="GTimerCommandId" value="0x0100" />
+         <IDSymbol name="GTimerGroupId" value="0x0200" />
+
+         <!-- Toolbar commands-->
+         <IDSymbol name="GTimerToolbar" value="0x1000" />
+         <IDSymbol name="GTimerToolbarGroup" value="0x1050" />
+      </GuidSymbol>
+
+      <GuidSymbol name="guidImages" value="{c43b05f8-1133-4078-92a8-c73d2e7734a9}" >
+         <IDSymbol name="bmpPic1" value="1" />
+      </GuidSymbol>
+   </Symbols>
+</CommandTable>
